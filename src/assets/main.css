@@ -1,16 +1,33 @@
 body {
   font-family: Consolas, Monaco;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 :root {
-  --primary: #eee;
-  --secondary: #ff5252;
-  --background: #eee;
-  --highlight: #ffda79;
+  --primary-light: #eee;
+  --background-light: white;
+  --text-light: black;
 
-  --theme: var(--primary);
+  --primary-dark: #333;
+  --background-dark: #222;
+  --text-dark: white;
 }
 
+html {
+  --primary: var(--primary-light);
+  --background: var(--background-light);
+  --highlight: var(--highlight-light);
+  --text: var(--text-light);
+}
+
+html.dark-mode {
+  --primary: var(--primary-dark);
+  --background: var(--background-dark);
+  --highlight: var(--highlight-dark);
+  --text: var(--text-dark);
+}
 /* Tooltip (hover) styles */
 
 [data-tooltip] {
