@@ -4,10 +4,6 @@ import { ref } from 'vue';
 const id = ref(`accordion-tab-${Math.random().toString(36).substr(2, 9)}`);
 
 const props = defineProps({
-  header: {
-    type: String,
-    required: true,
-  },
   open: {
     type: Boolean,
     default: false,

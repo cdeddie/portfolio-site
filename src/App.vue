@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, watch, computed } from 'vue';
 
-import ProjectSection from '@/components/ProjectSection.vue';
 import Projects from '@/components/Projects.vue'
 import { useDarkModeStore } from '@/stores/DarkModeStore';
 
@@ -58,6 +57,10 @@ a:hover {
   text-decoration: underline;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.613);
+}
+
+html.dark-mode a:hover {
+  color: #b3b3b3;
 }
 
 .title-container {
