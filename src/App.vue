@@ -30,6 +30,7 @@ const copyEmail = () => {
 }
 
 onMounted(() => {
+  darkModeStore.initDarkMode();
   updateHtmlClass();
 });
 
@@ -59,7 +60,7 @@ watch(() => darkModeStore.isDarkMode, () => {
     </div>
 
     <footer>
-      <p>2024 Created by Edwin Chen-Desailly | <a href="https://github.com/cdeddie" target="__blank">Github</a> | <a href="mailto:edwinchendesailly@gmail.com">Send Email</a></p>
+      <p>2024 Created by Edwin Chen-Desailly | <a href="https://github.com/cdeddie" target="_blank">Github</a> | <a href="mailto:edwinchendesailly@gmail.com">Send Email</a></p>
     </footer>
   </div>
 </template>
