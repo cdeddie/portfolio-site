@@ -4,10 +4,13 @@ import { onMounted, watch, computed } from 'vue';
 import Projects from '@/components/Projects.vue'
 import { useDarkModeStore } from '@/stores/DarkModeStore';
 
+import sunSvg from '@/assets/sun-svg.svg';
+import moonSvg from '@/assets/moon-svg.svg';
+
 const darkModeStore = useDarkModeStore();
 
 const svgSrc = computed(() => {
-  return darkModeStore.isDarkMode ? 'src/assets/sun-svg.svg' : 'src/assets/moon-svg.svg';
+  return darkModeStore.isDarkMode ? sunSvg : moonSvg;
 });
 
 const toggleDarkMode = () => {

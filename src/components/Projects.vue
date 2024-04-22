@@ -5,10 +5,13 @@ import AccordionTab from '@/components/AccordionTab.vue';
 import { computed } from 'vue';
 import { useDarkModeStore } from '@/stores/DarkModeStore';
 
+import awsDarkSvg from '@/assets/aws-dark-svg.svg';
+import awsSvg from '@/assets/aws-svg.svg';
+
 const darkModeStore = useDarkModeStore();
 
 const awsSvgSrc = computed(() => {
-  return darkModeStore.isDarkMode ? 'src/assets/aws-dark-svg.svg' : 'src/assets/aws-svg.svg';
+  return darkModeStore.isDarkMode ? awsDarkSvg : awsSvg;
 });
 </script>
 
@@ -124,7 +127,6 @@ const awsSvgSrc = computed(() => {
         <template #body>
           <div class="links-container">
             <a class="body-link" href="https://github.com/cdeddie/portfolio-site" target="_blank"><span class="link-title">Github</span><img class="svg dark-svg" src="@/assets/github-svg.svg"></a>
-            <a class="body-link" href="#"><span class="link-title">Site</span><img class="svg dark-svg" src="@/assets/link-svg.svg"></a>
           </div>
           <hr style="margin-bottom: 0; margin-left: 1rem; margin-right: 1rem;">
           <p>
