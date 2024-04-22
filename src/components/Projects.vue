@@ -235,5 +235,13 @@ li {
     height: 14px;
     width: 14px;
   }
+
+  .tab p {
+    font-size: 14px;
+  }
+
+  .tab li {
+    font-size: 14px;
+  }
 }
 </style>
