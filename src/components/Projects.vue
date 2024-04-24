@@ -131,7 +131,7 @@ const awsSvgSrc = computed(() => {
           <hr style="margin-bottom: 0; margin-left: 1rem; margin-right: 1rem;">
           <p>
             Developed a personal portfolio website using Vue.js, serving as a showcase for my projects and skills. 
-            Here I leveraged Vue.js and it's well-documented ecosystem to create dynamic and responsive user interfaces.
+            Here I leveraged Vue.js and it's well-documented ecosystem to create a dynamic and responsive user interface which is intended to emulate a paper resume.
           </p>
           <ul>
             <li>

@@ -31,7 +31,7 @@ const props = defineProps({
 }
 .tab__content {
   max-height: 0;
-  overflow: hidden;
+  overflow: scroll;
   transition: max-height 0.35s ease;
   color: var(--text);
 }
