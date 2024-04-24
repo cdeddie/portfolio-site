@@ -31,7 +31,7 @@ const props = defineProps({
 }
 .tab__content {
   max-height: 0;
-  overflow: scroll;
+  overflow: hidden;
   transition: max-height 0.35s ease;
   color: var(--text);
 }
@@ -79,6 +79,12 @@ const props = defineProps({
   }
   75% {
     transform: rotate(90deg) translate(-.25rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .tab__content {
+    overflow: scroll;
   }
 }
 </style>
