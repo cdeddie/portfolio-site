@@ -25,9 +25,11 @@ const awsSvgSrc = computed(() => {
             <div class="icon-array">
               <img class="svg" src="@/assets/vue-svg.svg">
               <img class="svg dark-svg" src="@/assets/express-svg.svg">
-              <img class="svg" src="@/assets/javascript-svg.svg">
+              <img class="svg" src="@/assets/typescript-svg.svg">
               <img class="svg" src="@/assets/html-5-svg.svg">
               <img class="svg" src="@/assets/css-3-svg.svg">
+              <img class="svg" :class="{ 'dark-svg': darkModeStore.isDarkMode }" src="@/assets/github-logo-svg.svg">
+              <img class="svg" src="@/assets/figma-svg.svg">
               <img class="svg dark-svg" :src="awsSvgSrc">
             </div>
           </div>
@@ -35,26 +37,35 @@ const awsSvgSrc = computed(() => {
 
         <template #body>
           <div class="links-container">
-            <a class="body-link" href="https://github.com/cdeddie/TuneTrail" target="_blank"><span class="link-title">Github</span><img class="svg dark-svg" src="@/assets/github-svg.svg"></a>
+            <a class="body-link" href="https://github.com/cdeddie/TuneTrail-v2" target="_blank"><span class="link-title">Frontend</span><img class="svg dark-svg" src="@/assets/github-svg.svg"></a>
+            <a class="body-link" href="https://github.com/cdeddie/TuneTrail-v2-api" target="_blank"><span class="link-title">Backend</span><img class="svg dark-svg" src="@/assets/github-svg.svg"></a>
             <a class="body-link" href="https://tunetrail.site" target="_blank"><span class="link-title">Site</span><img class="svg dark-svg" src="@/assets/link-svg.svg"></a>
           </div>
           <hr style="margin-bottom: 0; margin-left: 1rem; margin-right: 1rem;">
           <p>
-            After learning the basics of Vue.js, I decided to make my first fully fledged website. 
-            This is a client-focused website that allows Spotify users to interact with features of the Spotify API. 
+            Full stack web application that uses the Spotify API on a TypeScript/Express backend to deliver song 
+            recommendations to users. Hosted using Caddy server on an EC2 instance.
           </p>
           <p>
-            It includes a currently playing view, most played artists/songs lists, and a recommendation page which users can
-            take advantage of the Spotify API recommendation system to find songs based on artists/tracks they like alongside 
-            unique seed values (such as danceability, loudness etc).
+            After having initially created the website to be more of a Spotify API interaction frontend in plain JS, 
+            I eventually remade the website to be more focused on a particular service (song recommendations). 
+            I took this opportunity to use TypeScript throughout the frontend and backend, which was a solid learning experience.
           </p>
           <ul>
-            <li>Followed Spotify's documentation in order to leverage their API for a smooth user experience</li>
-            <li>Learned a lot about Vue in my first fully fledged SPA app</li>
-            <li>Incorporated the PrimeVue UI component library to enhance the appeal and UX of the app</li>
-            <li>Developed my understanding of Express.js, exploring middleware, user sessions and routing in conjunction with the Spotify API</li>
-            <li>Used media queries and Vue's reactive functionality in order to provide a responsive website, including a mobile navbar.</li>
-            <li>Hosted the site with a domain on an AWS EC2 instance, strengthening my Linux skills</li>
+            <li>
+              Features a modern UI designed initially in Figma. Made use of Shadcn-UI, a non-opinionated UI framework which allows for heavy customisation.
+            </li>
+            <li>
+              Used Swiper.js, a popular npm library for touch responsive slider components to provide a more unique experience for discovering new music. 
+              Also used media queries to deliver this same functionality to mobile users.
+            </li>
+            <li>
+              Developed a CI pipeline using GitHub Actions to automate frontend code deployment to an EC2 staging server for manual testing, 
+              followed by a manual pipeline for building and pushing updates to production.
+            </li>
+            <li>
+              Used Pinia, a Vue state management library in order to provide UI theming customization and solve other common issues found in web development.
+            </li>
           </ul>
         </template>
       </AccordionTab>
