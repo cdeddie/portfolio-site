@@ -46,7 +46,7 @@ watch(() => darkModeStore.isDarkMode, () => {
         <div style="font-weight: 800; font-size: 26px;">Eddie Chen-Desailly</div>
         <img id="dark-svg" :src="svgSrc" @click="toggleDarkMode"></img>
       </div>
-      <div style="margin-bottom: 40px;">5064 SA</div>
+      <div style="margin-bottom: 40px;">Adelaide SA</div>
       <p style="margin-bottom: 40px;">
         Computer science student with a strong foundation in software development. Experienced in developing web applications
         using modern technologies such as Vue.js, Express, and AWS. Seeking an internship opportunity to apply my skills, learn
