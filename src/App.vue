@@ -43,7 +43,7 @@ watch(() => darkModeStore.isDarkMode, () => {
   <div class="root" :class="{ 'dark-mode': darkModeStore.isDarkMode }">
     <div class="profile">
       <div class="title-container">
-        <div style="font-weight: 800; font-size: 26px;">Edwin Chen-Desailly</div>
+        <div style="font-weight: 800; font-size: 26px;">Eddie Chen-Desailly</div>
         <img id="dark-svg" :src="svgSrc" @click="toggleDarkMode"></img>
       </div>
       <div style="margin-bottom: 40px;">5064 SA</div>
